@@ -46,8 +46,8 @@ setup(
     description='''
         PyExecTime is a python module which can be used to find the execution time of a complete or partial python code. 
     '''.strip(),
-    long_description=readme(),
     long_description_content_type='text/markdown',
+    long_description=readme(),
     url="https://github.com/antaripchatterjee/{0}".format(meta.module_name),
     author="Antarip Chatterjee",
     author_email="antarip.chatterjee22@gmail.com",
