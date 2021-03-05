@@ -4,7 +4,7 @@ PyExecTime is a python module which can be used to find the execution time of a 
 
 ## Version
 
-The current version of this module is 0.0.1.
+The current version of this module is 0.0.2.
 
 Check it by below command,
 
