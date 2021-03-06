@@ -4,7 +4,7 @@ PyExecTime is a python module which can be used to find the execution time of a 
 
 ## Version
 
-The current version of this module is 0.0.2.
+The current version of this module is 0.0.3.
 
 Check it by below command,
 
@@ -38,7 +38,7 @@ You can use the module in two different ways.
 # % API Reference % #
 
 class PyExecTime():
-    def __init__(self, text="Execution took %lf seconds", file=sys.stdout):
+    def __init__(self, file=sys.stdout):
         ...
     
     def __exit__(self, exc_type, exc_val, exc_tb):
@@ -61,18 +61,18 @@ with PyExecTime():
 The above code will generate the below output.
 
 ```output
-1 2 3 4 ....
+0 1 2 3 ....
 ....
 ....
-.... 998 990
-PyExecTime [(main.py) 3:5] -> Execution took 0.000417 seconds
+.... 9998 9999
+[Sat Mar  6 12:41:44 2021 PyExecTime(pyexectime\pyexectime_test.py) <4:6>] -> Execution took 0.000039 seconds
 ```
 
 ### 2. Using decorator function `py_exec_time`
 ```python
 # % API Reference % #
 
-def py_exec_time(text="Execution took %lf seconds", file=sys.stdout):
+def py_exec_time(file=sys.stdout):
     def wrapper(fn):
         @wraps(fn)
         def inner(*argv, **kwargv):
@@ -95,11 +95,11 @@ write_number(10000)
 And the output will be,
 
 ```output
-1 2 3 4 ....
+0 1 2 3 ....
 ....
 ....
-.... 998 990
-PyExecTime [(main.py) 8:8] -> Execution took 0.000397 seconds
+.... 9998 9999
+[Sat Mar  6 12:41:44 2021 PyExecTime(test.py) <@test_dec:5>] -> Execution took 0.000035 seconds
 ```
 
 ## License
