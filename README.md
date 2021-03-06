@@ -4,7 +4,7 @@ PyExecTime is a python module which can be used to find the execution time of a 
 
 ## Version
 
-The current version of this module is 0.0.3.
+The current version of this module is 0.0.5.
 
 Check it by below command,
 
@@ -65,7 +65,7 @@ The above code will generate the below output.
 ....
 ....
 .... 9998 9999
-[Sat Mar  6 12:41:44 2021 PyExecTime(pyexectime\pyexectime_test.py) <4:6>] -> Execution took 0.000039 seconds
+[Sat Mar  6 12:41:44 2021 PyExecTime(main.py) <3:5>] -> Execution took 0.000039 seconds
 ```
 
 ### 2. Using decorator function `py_exec_time`
@@ -99,7 +99,7 @@ And the output will be,
 ....
 ....
 .... 9998 9999
-[Sat Mar  6 12:41:44 2021 PyExecTime(test.py) <@test_dec:5>] -> Execution took 0.000035 seconds
+[Sat Mar  6 12:41:44 2021 PyExecTime(main.py) <@write_number:8>] -> Execution took 0.000035 seconds
 ```
 
 ## License
